@@ -9,3 +9,5 @@ bin
 *.csr
 *.key
 TestResults
+
+*.swp
