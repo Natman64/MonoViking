@@ -125,8 +125,8 @@ technique RGBToHSVEffect
 {
     pass
     {	
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader = compile ps_2_0 RGBToHSVPixelShaderFunction();
+		VertexShader = compile vs_4_0 VertexShaderFunction();
+        PixelShader = compile ps_4_0 RGBToHSVPixelShaderFunction();
     }
 }
 
@@ -140,7 +140,7 @@ technique HSVAdditionEffect
 		SrcBlend = One; 
 		DestBlend = One; 
 
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader = compile ps_2_0 HSVAdditionPixelShaderFunction();
+		VertexShader = compile vs_4_0 VertexShaderFunction();
+        PixelShader = compile ps_4_0 HSVAdditionPixelShaderFunction();
 	}
 }

@@ -252,8 +252,8 @@ technique Standard
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSStandard();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSStandard();
 	}
 }
 
@@ -266,8 +266,8 @@ technique AlphaGradient
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSAlphaGradient();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSAlphaGradient();
 	}
 }
 
@@ -281,8 +281,8 @@ technique NoBlur
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSNoBlur();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSNoBlur();
 	}
 }
 
@@ -296,8 +296,8 @@ technique AnimatedLinear
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSAnimatedLinear();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSAnimatedLinear();
 	}
 }
 
@@ -310,8 +310,8 @@ technique AnimatedBidirectional
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSAnimatedBidirectional();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSAnimatedBidirectional();
 	}
 }
 
@@ -325,8 +325,8 @@ technique AnimatedRadial
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSAnimatedRadial();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSAnimatedRadial();
 	}
 }
 
@@ -340,8 +340,8 @@ technique Modern
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSModern();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSModern();
 	}
 }
 
@@ -355,8 +355,8 @@ technique Tubular
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSTubular();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSTubular();
 	}
 }
 
@@ -370,7 +370,7 @@ technique Glow
 		SrcBlend = SrcAlpha;
 		DestBlend = InvSrcAlpha;
 		BlendOp = Add;
-		vertexShader = compile vs_1_1 MyVS();
-		pixelShader = compile ps_2_0 MyPSGlow();
+		vertexShader = compile vs_4_0 MyVS();
+		pixelShader = compile ps_4_0 MyPSGlow();
 	}
 }

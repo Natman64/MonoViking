@@ -177,8 +177,8 @@ technique MergeRGBImages
     pass
     {	
 		AlphaBlendEnable = false; 
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader =  compile ps_2_0 RGBMergePixelShaderFunction();
+		VertexShader = compile vs_4_0 VertexShaderFunction();
+        PixelShader =  compile ps_4_0 RGBMergePixelShaderFunction();
     }
 }
 
@@ -187,7 +187,7 @@ technique MergeHSVImages
     pass
     {	
 		AlphaBlendEnable = false; 
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader =  compile ps_2_0 HSVMergePixelShaderFunction();
+		VertexShader = compile vs_4_0 VertexShaderFunction();
+        PixelShader =  compile ps_4_0 HSVMergePixelShaderFunction();
     }
 }

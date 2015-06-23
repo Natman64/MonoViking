@@ -11,3 +11,7 @@ bin
 TestResults
 
 *.swp
+
+# content pipeline
+*.mgcontent
+*.xnb

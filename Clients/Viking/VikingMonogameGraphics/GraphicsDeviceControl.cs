@@ -12,6 +12,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Xna.Framework.Graphics;
+using OpenTK;
 #endregion
 
 namespace VikingXNA
@@ -27,7 +28,7 @@ namespace VikingXNA
     /// a Windows Form. Derived classes can override the Initialize and Draw
     /// methods to add their own drawing code.
     /// </summary>
-    public class GraphicsDeviceControl : Control
+    public class GraphicsDeviceControl : GLControl
     {
         #region Fields
 
@@ -208,6 +209,15 @@ namespace VikingXNA
                 return deviceResetError;
             }
 
+            // http://jaquadro.com/2013/03/bringing-your-xna-winforms-controls-to-monogame-opengl/
+            GLControl control = GLControl.FromHandle(graphicsDeviceService.GraphicsDevice.PresentationParameters.DeviceWindowHandle) as GLControl;
+            if (control != null)
+            {
+                control.Context.MakeCurrent(WindowInfo);
+                graphicsDeviceService.GraphicsDevice.PresentationParameters.BackBufferHeight = ClientSize.Height;
+                graphicsDeviceService.GraphicsDevice.PresentationParameters.BackBufferWidth = ClientSize.Width;
+            }
+            
             // Many GraphicsDeviceControl instances can be sharing the same
             // GraphicsDevice. The device backbuffer will be resized to fit the
             // largest of these controls. But what if we are currently drawing
@@ -244,11 +254,8 @@ namespace VikingXNA
             try
             {
 #endif
-                Rectangle sourceRectangle = new Rectangle(0, 0, ClientSize.Width,
-                                                                ClientSize.Height);
-                
-                if(Device.GraphicsDeviceStatus == GraphicsDeviceStatus.Normal)
-                    Device.Present(sourceRectangle, null, this.Handle);
+                // http://jaquadro.com/2013/03/bringing-your-xna-winforms-controls-to-monogame-opengl/
+                SwapBuffers();
 #if !DEBUG
             }
             catch

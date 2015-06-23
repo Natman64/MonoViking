@@ -51,32 +51,16 @@ namespace VikingXNA
         /// </summary>
         GraphicsDeviceService(IntPtr windowHandle, int width, int height)
         {
-            parameters = new PresentationParameters();
-
-            parameters.BackBufferWidth = Math.Max(width, 1);
-            parameters.BackBufferHeight = Math.Max(height, 1);
-            parameters.BackBufferFormat = SurfaceFormat.Color;
-            parameters.DepthStencilFormat = DepthFormat.Depth24;
-
-            parameters.DeviceWindowHandle = windowHandle;
-            parameters.RenderTargetUsage = RenderTargetUsage.DiscardContents;
-            parameters.IsFullScreen = false;
-             
-            /*PORT XNA 4
-            parameters.EnableAutoDepthStencil = true;
-            parameters.AutoDepthStencilFormat = DepthFormat.Depth24;
-            */
-
-            if(GraphicsAdapter.DefaultAdapter.IsProfileSupported(GraphicsProfile.HiDef))
-                graphicsDevice = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, parameters);
-            else if (GraphicsAdapter.DefaultAdapter.IsProfileSupported(GraphicsProfile.Reach))
-                graphicsDevice = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.Reach, parameters);
-           else
+            // http://jaquadro.com/2013/03/bringing-your-xna-winforms-controls-to-monogame-opengl/
+            GraphicsAdapter adapter = GraphicsAdapter.DefaultAdapter;
+            GraphicsProfile profile = GraphicsProfile.Reach;
+            PresentationParameters pp = new PresentationParameters()
             {
-                System.Windows.Forms.MessageBox.Show("Default graphics adapter does not support XNA");
-                throw new System.InvalidOperationException("Default graphics adapter does not support XNA");
-            }
-   
+                DeviceWindowHandle = windowHandle,
+                BackBufferWidth = Math.Max(width, 1),
+                BackBufferHeight = Math.Max(height, 1)
+            };
+            graphicsDevice = new GraphicsDevice(adapter, profile, pp);
         }
 
 
@@ -129,25 +113,7 @@ namespace VikingXNA
         /// </summary>
         public void ResetDevice(int width, int height)
         {
-            System.Diagnostics.Debug.Assert(!graphicsDevice.IsDisposed, "Resetting disposed graphics device, why?"); 
-            if (graphicsDevice.IsDisposed)
-            {
-                System.Diagnostics.Trace.WriteLine("Resetting disposed graphics device, why?");
-                return;
-            }
-            if (DeviceResetting != null)
-                DeviceResetting(this, EventArgs.Empty);
-
-            parameters.BackBufferWidth = Math.Max(width,1);
-            parameters.BackBufferHeight = Math.Max(1, height);
-            parameters.DepthStencilFormat = DepthFormat.Depth24Stencil8;
-            parameters.IsFullScreen = false;
-            parameters.RenderTargetUsage = RenderTargetUsage.DiscardContents;
-
-            graphicsDevice.Reset(parameters);
-
-            if (DeviceReset != null)
-                DeviceReset(this, EventArgs.Empty);
+            // http://jaquadro.com/2013/03/bringing-your-xna-winforms-controls-to-monogame-opengl/
         }
 
 

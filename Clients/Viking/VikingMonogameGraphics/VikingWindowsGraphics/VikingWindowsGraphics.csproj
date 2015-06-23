@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EF561954-403C-4497-B6BC-1A3AD6A08AE6}</ProjectGuid>
+    <ProjectGuid>{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VikingWindowsGraphics</RootNamespace>
     <AssemblyName>VikingWindowsGraphics</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MonoGamePlatform>WindowsGL</MonoGamePlatform>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
     <MonoGameContentBuilderExe>
     </MonoGameContentBuilderExe>
   </PropertyGroup>
@@ -20,18 +20,16 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <OutputPath>bin\Windows\Release\</OutputPath>
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,28 +42,73 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\AnnotationOverBackgroundLumaEffect.cs">
+      <Link>AnnotationOverBackgroundLumaEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\BitmapFile.cs">
+      <Link>BitmapFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Camera.cs">
+      <Link>Camera.cs</Link>
+    </Compile>
+    <Compile Include="..\ChannelOverlayEffect.cs">
+      <Link>ChannelOverlayEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\DrawExtensions.cs">
+      <Link>DrawExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\GraphicsDeviceControl.cs">
+      <Link>GraphicsDeviceControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\GraphicsDeviceService.cs">
+      <Link>GraphicsDeviceService.cs</Link>
+    </Compile>
+    <Compile Include="..\MergeHSVEffect.cs">
+      <Link>MergeHSVEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\RoundLine.cs">
+      <Link>RoundLine.cs</Link>
+    </Compile>
+    <Compile Include="..\Scene.cs">
+      <Link>Scene.cs</Link>
+    </Compile>
+    <Compile Include="..\ServiceContainer.cs">
+      <Link>ServiceContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\TileBlendEffect.cs">
+      <Link>TileBlendEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\ViewerControl.cs">
+      <Link>ViewerControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="OpenTK">
-      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\WindowsGL\OpenTK.dll</HintPath>
-    </Reference>
     <Reference Include="MonoGame.Framework">
-      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Content\VikingMonogameGraphicsContent.mgcb" />
+    <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
-  <!-- Specify the search path explicitly so the ResolveAssemblyReferences task picks the right ones -->
-  <Target Name="BeforeResolveReferences">
-    <CreateProperty Value="$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows;$(AssemblySearchPaths)">
-      <Output TaskParameter="Value" PropertyName="AssemblySearchPaths" />
-    </CreateProperty>
-  </Target>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Geometry\Geometry.csproj">
+      <Project>{eacb87e8-a5e3-417e-a9ef-b80c2a68c020}</Project>
+      <Name>Geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GLControl\GLControl.csproj">
+      <Project>{7fcf8099-88ee-46ef-855a-7270437eed82}</Project>
+      <Name>GLControl</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

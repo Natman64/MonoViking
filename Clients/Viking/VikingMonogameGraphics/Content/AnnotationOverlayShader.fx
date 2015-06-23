@@ -73,12 +73,14 @@ struct PixelShaderInput
 	float4 HSLColor : COLOR0;
     float2 TexCoord : TEXCOORD0; 
 	float2 CenterDistance : TEXCOORD1;
+	float4 ScreenTexCoord : POSITION0;
 };
 
 struct CirclePixelShaderInput
 {
     float4 Position : POSITION0;
 	float4 HSLColor : COLOR0;
+	float4 ScreenTexCoord : POSITION0;
 	float2 CenterDistance : TEXCOORD0;
 };
 
