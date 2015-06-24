@@ -1,9 +1,9 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/Windows
-/intermediateDir:obj/Windows
-/platform:Windows
+/outputDir:bin/WindowsGL
+/intermediateDir:obj/WindowsGL
+/platform:WindowsGL
 /config:
 /profile:Reach
 /compress:False
@@ -53,24 +53,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Content/CircleMask.png
 
-#begin ../../Content/MergeHSVImages.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:../../Content/MergeHSVImages.fx
-
-#begin ../../Content/RGBToHSV.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:../../Content/RGBToHSV.fx
-
-#begin ../../Content/RoundLine.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:../../Content/RoundLine.fx
-
 #begin ../../Content/TileLayout.fx
 /importer:EffectImporter
 /processor:EffectProcessor
@@ -98,4 +80,10 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:TextureFormat=Color
 /build:../../Content/UpArrowV2.png
+
+#begin ../../Content/RGBToHSV.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:../../Content/RGBToHSV.fx
 

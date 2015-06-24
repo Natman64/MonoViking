@@ -81,7 +81,7 @@ float3 CorrectLuma(int Hextant, float3 Components, float Luma)
 	//Components.rgb += m.rgb;
 	Components += m; 
 
-    if(Components.r <= 1 && Components.r >= 0)
+	if(Components.r <= 1 && Components.r >= 0)
 		return Components;
 
 	Components = saturate(Components); 
@@ -93,7 +93,7 @@ float3 CorrectLuma(int Hextant, float3 Components, float Luma)
 	//Components.gb += m.gb;
 	Components.gb += m; 
 
-    if(Components.g <= 1 && Components.g >= 0)
+	if(Components.g <= 1 && Components.g >= 0)
 		return Components;
 	
 	Components = saturate(Components);
@@ -130,7 +130,7 @@ float3 CorrectLuma(int Hextant, float3 Components, float Luma)
 	m =  (Luma - OverlayLuma) * 1/ComponentLumaWeights[3];
 	Components.gb += m; 
 
-    if(Components.g <= 1 && Components.g >= 0)
+	if(Components.g <= 1 && Components.g >= 0)
 		return Components;
 	
 	Components.gb = saturate(Components.gb);

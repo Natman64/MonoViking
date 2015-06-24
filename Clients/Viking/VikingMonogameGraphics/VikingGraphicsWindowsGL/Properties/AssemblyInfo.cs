@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VikingWindowsGraphics")]
-[assembly: AssemblyProduct("VikingWindowsGraphics")]
+[assembly: AssemblyTitle("VikingGraphicsWindowsGL")]
+[assembly: AssemblyProduct("VikingGraphicsWindowsGL")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1b99c11a-0114-46fd-a9b8-e29e7630abb1")]
+[assembly: Guid("9d9e1d5e-561b-4bd4-a759-95f962fe5d28")]
 
 // Version information for an assembly consists of the following four values:
 //

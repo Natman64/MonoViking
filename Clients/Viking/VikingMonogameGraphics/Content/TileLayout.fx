@@ -139,8 +139,8 @@ technique TileLayoutToGreyscaleEffect
 		ZEnable = true;  
         ZWriteEnable = true;  
 
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 TileBlendToGreyscalePixelShaderFunction();
+		VertexShader = compile vs_2_0 VertexShaderFunction();
+        PixelShader = compile ps_2_0 TileBlendToGreyscalePixelShaderFunction();
     }
 }
 
@@ -152,7 +152,7 @@ technique TileLayoutToHSVEffect
 		ZEnable = true;  
         ZWriteEnable = true;  
 
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 TileBlendToHSVPixelShaderFunction();
+		VertexShader = compile vs_2_0 VertexShaderFunction();
+        PixelShader = compile ps_2_0 TileBlendToHSVPixelShaderFunction();
     }
 }

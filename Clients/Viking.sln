@@ -54,9 +54,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolumeViewModel", "Jotunn\V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAnnotationModelTest", "WebAnnotationModelTest\WebAnnotationModelTest.csproj", "{A4B6452D-7C65-487C-B446-4F9F6742C1BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikingWindowsGraphics", "Viking\VikingMonogameGraphics\VikingWindowsGraphics\VikingWindowsGraphics.csproj", "{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLControl", "..\GLControl\GLControl.csproj", "{7FCF8099-88EE-46EF-855A-7270437EED82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikingGraphicsWindowsGL", "Viking\VikingMonogameGraphics\VikingGraphicsWindowsGL\VikingGraphicsWindowsGL.csproj", "{A3E74A3D-6203-4749-8147-3D12FE38918E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -358,21 +358,6 @@ Global
 		{A4B6452D-7C65-487C-B446-4F9F6742C1BC}.ReleaseWithSymbols|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A4B6452D-7C65-487C-B446-4F9F6742C1BC}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|Any CPU
 		{A4B6452D-7C65-487C-B446-4F9F6742C1BC}.ReleaseWithSymbols|x86.ActiveCfg = Release|Any CPU
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Debug|x86.ActiveCfg = Debug|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Debug|x86.Build.0 = Debug|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Release|Any CPU.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Release|Mixed Platforms.Build.0 = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Release|x86.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.Release|x86.Build.0 = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.ReleaseWithSymbols|Any CPU.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.ReleaseWithSymbols|Mixed Platforms.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.ReleaseWithSymbols|x86.ActiveCfg = Release|x86
-		{1DD5EF37-A0BB-48B3-A4E4-B2837523B971}.ReleaseWithSymbols|x86.Build.0 = Release|x86
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -388,6 +373,21 @@ Global
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.ReleaseWithSymbols|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|Any CPU
 		{7FCF8099-88EE-46EF-855A-7270437EED82}.ReleaseWithSymbols|x86.ActiveCfg = Release|Any CPU
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Debug|x86.ActiveCfg = Debug|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Debug|x86.Build.0 = Debug|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Release|Any CPU.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Release|x86.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.Release|x86.Build.0 = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|Any CPU.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|Mixed Platforms.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|x86.ActiveCfg = Release|x86
+		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

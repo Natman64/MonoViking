@@ -138,8 +138,8 @@ technique HSOverBackgroundValueOverlayEffect
 		//DestBlend = InvSrcAlpha;
 		//BlendOp = Add;
 		
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 HSOverBackgroundValuePixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader = compile ps_3_0 HSOverBackgroundValuePixelShaderFunction();
     }
 
 }
@@ -155,8 +155,8 @@ technique HSVOnlyOverlayEffect
 		//DestBlend = InvSrcAlpha;
 		//BlendOp = Add;
 		
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 HSVOnlyPixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader = compile ps_3_0 HSVOnlyPixelShaderFunction();
     }
 }
 
@@ -171,7 +171,7 @@ technique BackgroundOnlyOverlayEffect
 		//DestBlend = InvSrcAlpha;
 		//BlendOp = Add;
 		
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 BackgroundValueOnlyPixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader = compile ps_3_0 BackgroundValueOnlyPixelShaderFunction();
     }
 }

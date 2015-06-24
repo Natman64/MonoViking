@@ -73,14 +73,14 @@ struct PixelShaderInput
 	float4 HSLColor : COLOR0;
     float2 TexCoord : TEXCOORD0; 
 	float2 CenterDistance : TEXCOORD1;
-	float4 ScreenTexCoord : POSITION0;
+	float2 ScreenTexCoord : SV_Position;
 };
 
 struct CirclePixelShaderInput
 {
     float4 Position : POSITION0;
 	float4 HSLColor : COLOR0;
-	float4 ScreenTexCoord : POSITION0;
+	float2 ScreenTexCoord : SV_Position;
 	float2 CenterDistance : TEXCOORD0;
 };
 
@@ -220,8 +220,8 @@ technique RGBOverBackgroundValueOverlayEffect
 {
     pass
     {
-		VertexShader = compile vs_4_0 VertexShaderFunction();
-        PixelShader = compile ps_4_0 RGBCircleTextureOverBackgroundLumaPixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader = compile ps_3_0 RGBCircleTextureOverBackgroundLumaPixelShaderFunction();
     }
 
 }
@@ -230,8 +230,8 @@ technique RGBCircleOverBackgroundValueOverlayEffect
 {
     pass
     {
-		VertexShader = compile vs_4_0 CircleVertexShaderFunction();
-        PixelShader = compile ps_4_0 RGBCircleOverBackgroundLumaPixelShaderFunction();
+		VertexShader = compile vs_3_0 CircleVertexShaderFunction();
+        PixelShader = compile ps_3_0 RGBCircleOverBackgroundLumaPixelShaderFunction();
     }
 
 }
