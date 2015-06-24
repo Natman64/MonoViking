@@ -456,7 +456,7 @@ namespace Viking.UI.Forms
             {
                 Settings.Default.VolumeURLs = new System.Collections.Specialized.StringCollection();
             }
-             
+
             foreach (string url in Settings.Default.VolumeURLs)
             {
                 comboVolumeURL.Items.Add(url);
@@ -467,7 +467,7 @@ namespace Viking.UI.Forms
                 comboVolumeURL.Text = this.VolumeURL;
                 if (!Settings.Default.VolumeURLs.Contains(this.VolumeURL))
                 {
-                    Settings.Default.VolumeURLs.Insert(0, this.VolumeURL); 
+                    Settings.Default.VolumeURLs.Insert(0, this.VolumeURL);
                 }
             }
             else if (Settings.Default.VolumeURLs.Count > 0)

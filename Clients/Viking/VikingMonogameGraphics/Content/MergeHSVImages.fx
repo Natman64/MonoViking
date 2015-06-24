@@ -28,31 +28,62 @@ uniform const texture Texture6;
 
 uniform const sampler ChannelSampler[5] = 
 {
-	sampler_state
-	{
-		Texture = (Texture1);
-		MipFilter = NONE;
-	},
-	sampler_state
-	{
-		Texture = (Texture2);
-		MipFilter = NONE;
-	},
-	sampler_state
-	{
-		Texture = (Texture3);
-		MipFilter = NONE;
-	},
-	sampler_state
-	{
-		Texture = (Texture4);
-		MipFilter = NONE;
-	},
-	sampler_state
-	{
-		Texture = (Texture5);
-		MipFilter = NONE;
-	}
+    sampler_state
+    {
+        Texture = (Texture1);
+        MipFilter = NONE;
+    },
+    sampler_state
+    {
+        Texture = (Texture2);
+        MipFilter = NONE;
+    },
+    sampler_state
+    {
+        Texture = (Texture3);
+        MipFilter = NONE;
+    },
+    sampler_state
+    {
+        Texture = (Texture4);
+        MipFilter = NONE;
+    },
+    sampler_state
+    {
+        Texture = (Texture5);
+        MipFilter = NONE;
+    }
+};
+
+uniform const sampler ChannelSampler1 =
+sampler_state
+{
+    Texture = (Texture1);
+    MipFilter = NONE;
+};
+uniform const sampler ChannelSampler2 =
+sampler_state
+{
+    Texture = (Texture2);
+    MipFilter = NONE;
+};
+uniform const sampler ChannelSampler3 =
+sampler_state
+{
+    Texture = (Texture3);
+    MipFilter = NONE;
+};
+uniform const sampler ChannelSampler4 =
+sampler_state
+{
+    Texture = (Texture4);
+    MipFilter = NONE;
+};
+uniform const sampler ChannelSampler5 =
+sampler_state
+{
+    Texture = (Texture5);
+    MipFilter = NONE;
 };
 
 // My shader requires a texture and verticies
@@ -100,9 +131,17 @@ PixelShaderOutput HSVMergePixelShaderFunction(VertexShaderOutput input)
 	float maxSat = 0; 
 	//float maxVal = 0; 
 	
-	for(int i = 0; i < NumTextures; i++)
+	float4 ChannelColors[5] =
+    {
+        tex2D(ChannelSampler1, input.TexCoord),
+        tex2D(ChannelSampler2, input.TexCoord),
+        tex2D(ChannelSampler3, input.TexCoord),
+        tex2D(ChannelSampler4, input.TexCoord),
+        tex2D(ChannelSampler5, input.TexCoord)
+    };
+    for(int i = 0; i < NumTextures; i++)
 	{
-		ChannelColor = tex2D(ChannelSampler[i], input.TexCoord);
+		ChannelColor = ChannelColors[i];
 
 		float3 HS = {ChannelHueAlpha[i] * ChannelColor.g,
 					 ChannelHueBeta[i] * ChannelColor.g,
@@ -134,7 +173,7 @@ PixelShaderOutput RGBMergePixelShaderFunction(VertexShaderOutput input)
 	
 	for(int i = 0; i < NumTextures; i++)
 	{
-		ChannelColor = tex2D(ChannelSampler[i], input.TexCoord);
+		ChannelColor = tex2D(ChannelSampler1, input.TexCoord);
 
 		float4 HS = {ChannelRGBColor[i].r * ChannelColor.r,
 					 ChannelRGBColor[i].g * ChannelColor.g,
@@ -177,8 +216,8 @@ technique MergeRGBImages
     pass
     {	
 		AlphaBlendEnable = false; 
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader =  compile ps_2_0 RGBMergePixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader =  compile ps_3_0 RGBMergePixelShaderFunction();
     }
 }
 
@@ -187,7 +226,7 @@ technique MergeHSVImages
     pass
     {	
 		AlphaBlendEnable = false; 
-		VertexShader = compile vs_2_0 VertexShaderFunction();
-        PixelShader =  compile ps_2_0 HSVMergePixelShaderFunction();
+		VertexShader = compile vs_3_0 VertexShaderFunction();
+        PixelShader =  compile ps_3_0 HSVMergePixelShaderFunction();
     }
 }

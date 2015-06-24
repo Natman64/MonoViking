@@ -24,7 +24,7 @@ struct VS_INPUT
 	float4 pos : POSITION;
 	float2 vertRhoTheta : NORMAL;
 	float2 vertScaleTrans : TEXCOORD0;
-	float instanceIndex : TEXCOORD1;
+	uint instanceIndex : SV_VertexID;
 };
 
 
@@ -43,45 +43,48 @@ struct PS_Output
 };
 
 
+/*{*/
+    /*return (VS_OUTPUT)0;*/
+/*}*/
 VS_OUTPUT MyVS( VS_INPUT In )
 {
-	VS_OUTPUT Out = (VS_OUTPUT)0;
-	float4 pos = In.pos;
+    VS_OUTPUT Out = (VS_OUTPUT)0;
+    float4 pos = In.pos;
 
-	float x0 = instanceData[In.instanceIndex].x;
-	float y0 = instanceData[In.instanceIndex].y;
-	float rho = instanceData[In.instanceIndex].z;
-	float theta = instanceData[In.instanceIndex].w;
+    float x0 = instanceData[In.instanceIndex].x;
+    float y0 = 0;//instanceData[In.instanceIndex].y;
+    float rho = 0;//instanceData[In.instanceIndex].z;
+    float theta = 0; //instanceData[In.instanceIndex].w;
 
-	// Scale X by lineRadius, and translate X by rho, in worldspace
-	// based on what part of the line we're on
-	float vertScale = In.vertScaleTrans.x;
-	float vertTrans = In.vertScaleTrans.y;
-	pos.x *= (vertScale * lineRadius);
-	pos.x += (vertTrans * rho);
+    // Scale X by lineRadius, and translate X by rho, in worldspace
+    // based on what part of the line we're on
+    float vertScale = In.vertScaleTrans.x;
+    float vertTrans = In.vertScaleTrans.y;
+    pos.x *= (vertScale * lineRadius);
+    pos.x += (vertTrans * rho);
 
-	// Always scale Y by lineRadius regardless of what part of the line we're on
-	pos.y *= lineRadius;
-	
-	// Now the vertex is adjusted for the line length and radius, and is 
-	// ready for the usual world/view/projection transformation.
+    // Always scale Y by lineRadius regardless of what part of the line we're on
+    pos.y *= lineRadius;
+    
+    // Now the vertex is adjusted for the line length and radius, and is 
+    // ready for the usual world/view/projection transformation.
 
-	// World matrix is rotate(theta) * translate(p0)
-	matrix worldMatrix = 
-	{
-		cos(theta), sin(theta), 0, 0,
-		-sin(theta), cos(theta), 0, 0,
-		0, 0, 1, 0,
-		x0, y0, 0, 1 
-	};
-	
-	Out.position = mul(mul(pos, worldMatrix), viewProj);
-	
-	Out.polar = float3(In.vertRhoTheta, vertTrans);
+    // World matrix is rotate(theta) * translate(p0)
+    matrix worldMatrix = 
+    {
+        cos(theta), sin(theta), 0, 0,
+        -sin(theta), cos(theta), 0, 0,
+        0, 0, 1, 0,
+        x0, y0, 0, 1 
+    };
+    
+    Out.position = mul(mul(pos, worldMatrix), viewProj);
+    
+    Out.polar = float3(In.vertRhoTheta, vertTrans);
 
-	Out.posModelSpace.xy = pos.xy;
+    Out.posModelSpace.xy = pos.xy;
 
-	return Out;
+    return Out;
 }
 
 

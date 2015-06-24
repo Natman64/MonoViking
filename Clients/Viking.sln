@@ -58,6 +58,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLControl", "..\GLControl\G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikingGraphicsWindowsGL", "Viking\VikingMonogameGraphics\VikingGraphicsWindowsGL\VikingGraphicsWindowsGL.csproj", "{A3E74A3D-6203-4749-8147-3D12FE38918E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsGL", "WindowsGL", "{DEC767DE-C633-4C5A-A0AE-AC8E5CBA2495}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikingCoreWindowsGL", "Viking\NGVVMonogame\VikingCoreWindowsGL\VikingCoreWindowsGL.csproj", "{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -388,9 +392,28 @@ Global
 		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|x86
 		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|x86.ActiveCfg = Release|x86
 		{A3E74A3D-6203-4749-8147-3D12FE38918E}.ReleaseWithSymbols|x86.Build.0 = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Debug|x86.ActiveCfg = Debug|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Debug|x86.Build.0 = Debug|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Release|Any CPU.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Release|x86.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.Release|x86.Build.0 = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.ReleaseWithSymbols|Any CPU.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.ReleaseWithSymbols|Mixed Platforms.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.ReleaseWithSymbols|Mixed Platforms.Build.0 = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.ReleaseWithSymbols|x86.ActiveCfg = Release|x86
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}.ReleaseWithSymbols|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3E74A3D-6203-4749-8147-3D12FE38918E} = {DEC767DE-C633-4C5A-A0AE-AC8E5CBA2495}
+		{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B} = {DEC767DE-C633-4C5A-A0AE-AC8E5CBA2495}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = NGVV.vsmdi

@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4BFE88E-ACF6-41E9-9542-0FC8C0BC404B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Viking</RootNamespace>
+    <AssemblyName>VikingCoreWindowsGL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>WindowsGL</MonoGamePlatform>
+    <MonoGameContentBuilderExe>
+    </MonoGameContentBuilderExe>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\NGVV\Common\Attributes.cs">
+      <Link>Common\Attributes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Common\Enums.cs">
+      <Link>Common\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Common\EventArgs.cs">
+      <Link>Common\EventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Common\Interfaces.cs">
+      <Link>Common\Interfaces.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\DefaultCommand.cs">
+      <Link>DefaultCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ExtensionManager.cs">
+      <Link>ExtensionManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Global.cs">
+      <Link>Global.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\GridDrawExtensions.cs">
+      <Link>GridDrawExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Objects\GenericTreeNode.cs">
+      <Link>Objects\GenericTreeNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Objects\UIObjBase.cs">
+      <Link>Objects\UIObjBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\PropertyPages\SectionChannelsPage.cs">
+      <Link>PropertyPages\SectionChannelsPage.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\PropertyPages\SectionChannelsPage.Designer.cs">
+      <Link>PropertyPages\SectionChannelsPage.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\PropertyPages\SectionGeneralPage.cs">
+      <Link>PropertyPages\SectionGeneralPage.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\PropertyPages\SectionGeneralPage.Designer.cs">
+      <Link>PropertyPages\SectionGeneralPage.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\TextureCache.cs">
+      <Link>TextureCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Threading\DisposeTextureThreadingObj.cs">
+      <Link>Threading\DisposeTextureThreadingObj.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Threading\StreamToTexture.cs">
+      <Link>Threading\StreamToTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Threading\TextureReader.cs">
+      <Link>Threading\TextureReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Threading\TextureRequestQueue.cs">
+      <Link>Threading\TextureRequestQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\TileViewModelCache.cs">
+      <Link>TileViewModelCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DockableUserControl.cs">
+      <Link>UI\BaseClasses\DockableUserControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DockableUserControl.Designer.cs">
+      <Link>UI\BaseClasses\DockableUserControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DockingTreeControl.cs">
+      <Link>UI\BaseClasses\DockingTreeControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DockingTreeControl.Designer.cs">
+      <Link>UI\BaseClasses\DockingTreeControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DocklingListControl.cs">
+      <Link>UI\BaseClasses\DocklingListControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\DocklingListControl.Designer.cs">
+      <Link>UI\BaseClasses\DocklingListControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\ModuleTabControl.cs">
+      <Link>UI\BaseClasses\ModuleTabControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\ModuleTabControl.Designer.cs">
+      <Link>UI\BaseClasses\ModuleTabControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\PropertyPageBase.cs">
+      <Link>UI\BaseClasses\PropertyPageBase.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\TagMenuItem.cs">
+      <Link>UI\BaseClasses\TagMenuItem.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\VikingControl.cs">
+      <Link>UI\BaseClasses\VikingControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\VikingObjectEventControl.cs">
+      <Link>UI\BaseClasses\VikingObjectEventControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\BaseClasses\VikingObjectEventControl.Designer.cs">
+      <Link>UI\BaseClasses\VikingObjectEventControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Command\Command.cs">
+      <Link>UI\Command\Command.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Command\DefaultCommand.cs">
+      <Link>UI\Command\DefaultCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Command\RectangleCommand.cs">
+      <Link>UI\Command\RectangleCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Command\ROIRectCommand.cs">
+      <Link>UI\Command\ROIRectCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Command\ScreenCaptureCommand.cs">
+      <Link>UI\Command\ScreenCaptureCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ChannelPickerControl.cs">
+      <Link>UI\Controls\ChannelPickerControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ChannelPickerControl.Designer.cs">
+      <Link>UI\Controls\ChannelPickerControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ChannelSetupControl.cs">
+      <Link>UI\Controls\ChannelSetupControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ChannelSetupControl.Designer.cs">
+      <Link>UI\Controls\ChannelSetupControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\EnableToolBar.cs">
+      <Link>UI\Controls\EnableToolBar.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\EnableToolBar.Designer.cs">
+      <Link>UI\Controls\EnableToolBar.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\NumericTextBox.cs">
+      <Link>UI\Controls\NumericTextBox.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectLinkLabel.cs">
+      <Link>UI\Controls\ObjectLinkLabel.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectLinkLabel.Designer.cs">
+      <Link>UI\Controls\ObjectLinkLabel.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectListView.cs">
+      <Link>UI\Controls\ObjectListView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectListView.Designer.cs">
+      <Link>UI\Controls\ObjectListView.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectTreeView.cs">
+      <Link>UI\Controls\ObjectTreeView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\ObjectTreeView.Designer.cs">
+      <Link>UI\Controls\ObjectTreeView.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\PropertySheetControl.cs">
+      <Link>UI\Controls\PropertySheetControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\PropertySheetControl.Designer.cs">
+      <Link>UI\Controls\PropertySheetControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\SectionViewerControl.cs">
+      <Link>UI\Controls\SectionViewerControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\SectionViewerControl.Designer.cs">
+      <Link>UI\Controls\SectionViewerControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\UserCredentialsControl.cs">
+      <Link>UI\Controls\UserCredentialsControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Controls\UserCredentialsControl.Designer.cs">
+      <Link>UI\Controls\UserCredentialsControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\AboutBox.cs">
+      <Link>UI\Forms\AboutBox.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\AboutBox.Designer.cs">
+      <Link>UI\Forms\AboutBox.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\FrameCapturesForm.cs">
+      <Link>UI\Forms\FrameCapturesForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\FrameCapturesForm.Designer.cs">
+      <Link>UI\Forms\FrameCapturesForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\GenericProgressForm.cs">
+      <Link>UI\Forms\GenericProgressForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\GenericProgressForm.Designer.cs">
+      <Link>UI\Forms\GenericProgressForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\GoToLocationForm.cs">
+      <Link>UI\Forms\GoToLocationForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\GoToLocationForm.Designer.cs">
+      <Link>UI\Forms\GoToLocationForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\LoadingVolumeForm.cs">
+      <Link>UI\Forms\LoadingVolumeForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\LoadingVolumeForm.Designer.cs">
+      <Link>UI\Forms\LoadingVolumeForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\Logon.cs">
+      <Link>UI\Forms\Logon.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\Logon.Designer.cs">
+      <Link>UI\Forms\Logon.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\LogonForm.cs">
+      <Link>UI\Forms\LogonForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\LogonForm.Designer.cs">
+      <Link>UI\Forms\LogonForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\PropertySheetForm.cs">
+      <Link>UI\Forms\PropertySheetForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\PropertySheetForm.Designer.cs">
+      <Link>UI\Forms\PropertySheetForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\ScreenshotForm.cs">
+      <Link>UI\Forms\ScreenshotForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\ScreenshotForm.Designer.cs">
+      <Link>UI\Forms\ScreenshotForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SectionChooserForm.cs">
+      <Link>UI\Forms\SectionChooserForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SectionChooserForm.Designer.cs">
+      <Link>UI\Forms\SectionChooserForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SectionViewerForm.cs">
+      <Link>UI\Forms\SectionViewerForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SectionViewerForm.Designer.cs">
+      <Link>UI\Forms\SectionViewerForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SetupChannelsForm.cs">
+      <Link>UI\Forms\SetupChannelsForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SetupChannelsForm.Designer.cs">
+      <Link>UI\Forms\SetupChannelsForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SplashForm.cs">
+      <Link>UI\Forms\SplashForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\SplashForm.Designer.cs">
+      <Link>UI\Forms\SplashForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\TileExportForm.cs">
+      <Link>UI\Forms\TileExportForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\TileExportForm.Designer.cs">
+      <Link>UI\Forms\TileExportForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\VikingForm.cs">
+      <Link>UI\Forms\VikingForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\VikingForm.Designer.cs">
+      <Link>UI\Forms\VikingForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\VikingMain.cs">
+      <Link>UI\Forms\VikingMain.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\Forms\VikingMain.Designer.cs">
+      <Link>UI\Forms\VikingMain.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\State.cs">
+      <Link>UI\State.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\VolumeControls\SectionList.cs">
+      <Link>UI\VolumeControls\SectionList.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\..\NGVV\UI\VolumeControls\SectionList.Designer.cs">
+      <Link>UI\VolumeControls\SectionList.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Util\BmpWriter.cs">
+      <Link>Util\BmpWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Util\Defaults.cs">
+      <Link>Util\Defaults.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Util\ListViewColumnSorter.cs">
+      <Link>Util\ListViewColumnSorter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\Util\Util.cs">
+      <Link>Util\Util.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ViewModels\SectionViewModel.cs">
+      <Link>ViewModels\SectionViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ViewModels\TileViewModel.cs">
+      <Link>ViewModels\TileViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ViewModels\TriangulationViewModel.cs">
+      <Link>ViewModels\TriangulationViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ViewModels\VolumeViewModel.cs">
+      <Link>ViewModels\VolumeViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NGVV\ViewportExtension.cs">
+      <Link>ViewportExtension.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\WindowsGL\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Geometry\Geometry.csproj">
+      <Project>{eacb87e8-a5e3-417e-a9ef-b80c2a68c020}</Project>
+      <Name>Geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GLControl\GLControl.csproj">
+      <Project>{7fcf8099-88ee-46ef-855a-7270437eed82}</Project>
+      <Name>GLControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Common.csproj">
+      <Project>{b35b0c61-ec9c-425a-846d-f160d5b12158}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\VolumeModel\VolumeModel.csproj">
+      <Project>{2eba2a77-f7f0-4efc-ac06-a12fe249388f}</Project>
+      <Name>VolumeModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VikingMonogameGraphics\VikingGraphicsWindowsGL\VikingGraphicsWindowsGL.csproj">
+      <Project>{a3e74a3d-6203-4749-8147-3d12fe38918e}</Project>
+      <Name>VikingGraphicsWindowsGL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\NGVV\Resources\marclab.png">
+      <Link>Resources\marclab.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <!-- Specify the search path explicitly so the ResolveAssemblyReferences task picks the right ones -->
+  <Target Name="BeforeResolveReferences">
+    <CreateProperty Value="$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows;$(AssemblySearchPaths)">
+      <Output TaskParameter="Value" PropertyName="AssemblySearchPaths" />
+    </CreateProperty>
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--<Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
