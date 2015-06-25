@@ -314,7 +314,7 @@ namespace Viking.UI.Forms
             this.Controls.Add(this.marclabLink);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupUserInfo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Logon";
             this.Opacity = 0.95D;

@@ -93,9 +93,3 @@
 /processorParam:DebugMode=Auto
 /build:../../Content/MergeHSVImages.fx
 
-#begin ../../Content/RoundLine.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:../../Content/RoundLine.fx
-

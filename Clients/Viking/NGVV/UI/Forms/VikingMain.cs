@@ -16,7 +16,7 @@ using Viking.Common;
 using System.Reflection;
 using Common.DataStructures;
 using Viking.VolumeModel;
-using Viking.ViewModels; 
+using Viking.ViewModels;
 
 namespace Viking
 {
@@ -25,8 +25,6 @@ namespace Viking
 
         public VikingMain()
         {
-            
-
             InitializeComponent();
             
             TabsModules.TabCategory = TABCATEGORY.ACTION;

@@ -1033,7 +1033,7 @@ namespace Viking.UI.Controls
 
             //Set a standard starting state for all overlay modules
             graphicsDevice.DepthStencilState = OverlayBackgroundDepthState;
-            graphicsDevice.ReferenceStencil = 1;
+            //graphicsDevice.ReferenceStencil = 1;
 
 
             //OK, blend the overlay with the underlying greyscale image
@@ -1057,7 +1057,7 @@ namespace Viking.UI.Controls
                 {
                     ++NextStencilValue;
                     graphicsDevice.DepthStencilState = CreateDepthStateForOverlay(++NextStencilValue);
-                    graphicsDevice.ReferenceStencil = NextStencilValue;
+                    //graphicsDevice.ReferenceStencil = NextStencilValue;
 
                     graphicsDevice.Clear(ClearOptions.DepthBuffer, Microsoft.Xna.Framework.Color.Black, float.MaxValue, 0);
 
@@ -1073,7 +1073,7 @@ namespace Viking.UI.Controls
                         if (CurrentCommand != null)
                         {
                             graphicsDevice.DepthStencilState = CreateDepthStateForOverlay(++NextStencilValue, false);
-                            graphicsDevice.ReferenceStencil = NextStencilValue;
+                            //graphicsDevice.ReferenceStencil = NextStencilValue;
 
                             CurrentCommand.OnDraw(graphicsDevice, scene, basicEffect);
                         }
@@ -1192,7 +1192,7 @@ namespace Viking.UI.Controls
                 graphicsDevice.Clear(ClearOptions.DepthBuffer, Microsoft.Xna.Framework.Color.Blue, float.MaxValue, int.MaxValue);
 
                 //Use a stencil buffer to prevent lower-res textures from overwriting higer-res textures
-                graphicsDevice.ReferenceStencil = iLevel;
+                //graphicsDevice.ReferenceStencil = iLevel;
                 graphicsDevice.DepthStencilState = CreateDepthStateForDownsampleLevel(iLevel);
 
                 SortedDictionary<string, Tile> tileList = visibleTiles.GetTilesForLevel(level);
@@ -1260,7 +1260,7 @@ namespace Viking.UI.Controls
 
                 if (transform != null)
                 {
-                    graphicsDevice.ReferenceStencil = int.MaxValue;
+                    //graphicsDevice.ReferenceStencil = int.MaxValue;
                     graphicsDevice.DepthStencilState = CreateDepthStateForDownsampleLevel(int.MaxValue);
 
                     using (TriangulationViewModel stosMeshViewModel = new TriangulationViewModel(transform))

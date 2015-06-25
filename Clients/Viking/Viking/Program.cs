@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
-using Viking.UI.Forms; 
+using Viking.UI.Forms;
 
 namespace Viking
 {

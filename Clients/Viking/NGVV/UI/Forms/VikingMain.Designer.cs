@@ -99,7 +99,7 @@ namespace Viking
             this.ClientSize = new System.Drawing.Size(867, 652);
             this.Controls.Add(this.TabsModules);
             this.Controls.Add(this.menuViewer);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuViewer;
             this.Name = "VikingMain";
