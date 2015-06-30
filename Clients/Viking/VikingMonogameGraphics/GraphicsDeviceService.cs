@@ -41,6 +41,13 @@ namespace VikingXNA
         // Keep track of how many controls are sharing the singletonInstance.
         static int referenceCount;
 
+        GraphicsEngine graphicsEngine;
+        GraphicsDevice graphicsDevice;
+
+
+        // Store the current device settings.
+        PresentationParameters parameters;
+
 
         #endregion
 
@@ -58,9 +65,18 @@ namespace VikingXNA
             {
                 DeviceWindowHandle = windowHandle,
                 BackBufferWidth = Math.Max(width, 1),
-                BackBufferHeight = Math.Max(height, 1)
+                BackBufferHeight = Math.Max(height, 1),
             };
-            graphicsDevice = new GraphicsDevice(adapter, profile, pp);
+
+            graphicsEngine = new GraphicsEngine();
+            graphicsEngine.UseExternalWindow = true;
+            graphicsEngine.PresentationParameters = pp;
+
+            //Thread graphicsThread = new Thread(() => { graphicsEngine.Run(); });
+            //graphicsThread.Start();
+            graphicsEngine.Run();
+
+            graphicsDevice = graphicsEngine.GraphicsDevice;
         }
 
 
@@ -124,13 +140,6 @@ namespace VikingXNA
         {
             get { return graphicsDevice; }
         }
-
-        GraphicsDevice graphicsDevice;
-
-
-        // Store the current device settings.
-        PresentationParameters parameters;
-
 
         // IGraphicsDeviceService events.
         public event EventHandler<System.EventArgs> DeviceCreated;

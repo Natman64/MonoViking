@@ -24,7 +24,7 @@ struct VS_INPUT
 	float4 pos : POSITION;
 	float2 vertRhoTheta : NORMAL;
 	float2 vertScaleTrans : TEXCOORD0;
-	float instanceIndex : TEXCOORD1;
+	float2 instanceIndex : TEXCOORD1;
 };
 
 
@@ -48,10 +48,10 @@ VS_OUTPUT MyVS( VS_INPUT In )
 	VS_OUTPUT Out = (VS_OUTPUT)0;
 	float4 pos = In.pos;
 
-	float x0 = instanceData[In.instanceIndex].x;
-	float y0 = instanceData[In.instanceIndex].y;
-	float rho = instanceData[In.instanceIndex].z;
-	float theta = instanceData[In.instanceIndex].w;
+	float x0 = instanceData[(int)In.instanceIndex].x;
+	float y0 = instanceData[(int)In.instanceIndex].y;
+	float rho = instanceData[(int)In.instanceIndex].z;
+	float theta = instanceData[(int)In.instanceIndex].w;
 
 	// Scale X by lineRadius, and translate X by rho, in worldspace
 	// based on what part of the line we're on

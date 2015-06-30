@@ -63,6 +63,9 @@
     <Compile Include="..\GraphicsDeviceService.cs">
       <Link>GraphicsDeviceService.cs</Link>
     </Compile>
+    <Compile Include="..\GraphicsEngine.cs">
+      <Link>GraphicsEngine.cs</Link>
+    </Compile>
     <Compile Include="..\MergeHSVEffect.cs">
       <Link>MergeHSVEffect.cs</Link>
     </Compile>
