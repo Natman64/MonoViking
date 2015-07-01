@@ -41,7 +41,8 @@ namespace VikingXNA
         {
             mGraphicsDeviceManager = new GraphicsDeviceManager(this);
 
-            PresentationParameters = null;
+            this.IsMouseVisible = true;
+
             UseExternalWindow = false;
 
             mGraphicsDeviceManager.PreparingDeviceSettings += OnPreparingDeviceSettings;
@@ -55,7 +56,8 @@ namespace VikingXNA
         {
             if (UseExternalWindow && PresentationParameters != null)
             {
-                Form gameForm = Control.FromHandle(this.Window.Handle) as Form;
+                Control ctl = Control.FromHandle(this.Window.Handle);
+                Form gameForm = ctl as Form;
 
                 if (gameForm != null)
                     gameForm.Shown += HideGameWindow;
@@ -76,5 +78,10 @@ namespace VikingXNA
         }
 
         #endregion
+
+        protected override void Draw(GameTime gameTime)
+        {
+            base.Draw(gameTime);
+        }
     }
 }

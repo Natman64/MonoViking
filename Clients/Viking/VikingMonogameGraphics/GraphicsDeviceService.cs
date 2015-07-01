@@ -42,7 +42,11 @@ namespace VikingXNA
         static int referenceCount;
 
         GraphicsEngine graphicsEngine;
-        GraphicsDevice graphicsDevice;
+        GraphicsDevice graphicsDevice
+        {
+            get { return graphicsEngine.GraphicsDevice; }
+        }
+
 
 
         // Store the current device settings.
@@ -72,11 +76,13 @@ namespace VikingXNA
             graphicsEngine.UseExternalWindow = true;
             graphicsEngine.PresentationParameters = pp;
 
-            //Thread graphicsThread = new Thread(() => { graphicsEngine.Run(); });
-            //graphicsThread.Start();
-            graphicsEngine.Run();
+            Thread graphicsThread = new Thread(() => { graphicsEngine.Run(); });
+         
+            graphicsThread.Start();
+            Thread.Sleep(1000);
+            //graphicsEngine.Run();
 
-            graphicsDevice = graphicsEngine.GraphicsDevice;
+            //graphicsDevice = graphicsEngine.GraphicsDevice;
         }
 
 
@@ -86,6 +92,7 @@ namespace VikingXNA
         public static GraphicsDeviceService AddRef(IntPtr windowHandle,
                                                    int width, int height)
         {
+            
             // Increment the "how many controls sharing the device" reference count.
             if (Interlocked.Increment(ref referenceCount) == 1)
             {
@@ -96,6 +103,7 @@ namespace VikingXNA
             }
 
             return singletonInstance;
+            
         }
 
 
@@ -104,6 +112,7 @@ namespace VikingXNA
         /// </summary>
         public void Release(bool disposing)
         {
+            
             // Decrement the "how many controls sharing the device" reference count.
             if (Interlocked.Decrement(ref referenceCount) == 0)
             {
@@ -117,8 +126,9 @@ namespace VikingXNA
                     graphicsDevice.Dispose();
                 }
 
-                graphicsDevice = null;
+                //graphicsDevice = null;
             }
+            
         }
 
 
